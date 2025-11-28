@@ -1,8 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
-import siteConfig from '../data/siteConfig'
-import correlationheatmap from '../assets/correlationheatmap.png'
-
-// ... then in projects: images: [correlationheatmap]
+import React, { useState, useEffect, useRef } from 'react';
+import siteConfig from '../data/siteConfig';
 
 // Modal Component for Swipeable Image Gallery
 function ImageModal({ images, initialIndex, onClose }) {
@@ -69,7 +66,10 @@ function ImageModal({ images, initialIndex, onClose }) {
 
 // Updated Image Display (No Carousel in Card, Just Clickable Image)
 function ImageDisplay({ images, onImageClick }) {
-  if (!images || images.length === 0) return <div className="no-images">No images available</div>;
+  // Improved error handling: Check if images exist and are valid
+  if (!images || images.length === 0 || !images[0]) {
+    return <div className="no-images">No images available</div>;  // Fallback message
+  }
 
   return (
     <img
@@ -77,6 +77,7 @@ function ImageDisplay({ images, onImageClick }) {
       alt="Project screenshot"
       className="project-image"
       onClick={() => onImageClick(0)} // Click to open modal at first image
+      onError={(e) => { e.target.style.display = 'none'; }} // Hide broken images (optional)
     />
   );
 }
