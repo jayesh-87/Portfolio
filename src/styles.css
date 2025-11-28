@@ -25,8 +25,23 @@ body {
 .topbar .container { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 2rem; }
 .logo { font-weight: 700; color: var(--accent); text-decoration: none; font-size: 1.5rem; transition: var(--transition); }
 .logo:hover { color: var(--secondary); }
+.nav { display: flex; } /* Desktop nav: flex layout */
 .nav a { margin-left: 1.5rem; color: var(--muted); text-decoration: none; transition: var(--transition); }
 .nav a:hover { color: var(--accent); transform: translateY(-1px); }
+
+/* Hamburger Menu Styles */
+.hamburger { display: none; flex-direction: column; cursor: pointer; gap: 4px; padding: 0.5rem; border: none; background: transparent; }
+.hamburger span { width: 25px; height: 3px; background: var(--text); transition: var(--transition); border-radius: 2px; }
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+
+/* Mobile Nav Overlay */
+.mobile-nav { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 50; flex-direction: column; justify-content: center; align-items: center; }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { color: #FFFFFF; font-size: 1.5rem; margin: 1rem 0; text-decoration: none; transition: var(--transition); }
+.mobile-nav a:hover { color: var(--accent); transform: scale(1.1); }
+
 .hero { display: flex; gap: 4rem; align-items: center; padding: 6rem 0; background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(16,185,129,0.1) 100%); border-radius: var(--border-radius); margin-bottom: 2rem; } /* Added subtle background gradient and margin */
 .hero-left { flex: 1; }
 .hero-right { width: 250px; display: flex; justify-content: center; align-items: center; }
@@ -156,7 +171,11 @@ h2 { margin-top: 0; color: var(--text); font-size: 2.5rem; font-weight: 700; tex
 .footer .container { display: flex; justify-content: space-between; align-items: center; }
 .social a { margin-left: 1.5rem; color: var(--muted); text-decoration: none; transition: var(--transition); }
 .social a:hover { color: var(--accent); transform: scale(1.1); }
-@media (max-width: 800px) {
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .nav { display: none; } /* Hide desktop nav */
+  .hamburger { display: flex; } /* Show hamburger button */
   .hero {
     flex-direction: column;
     text-align: center;
