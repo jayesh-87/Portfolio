@@ -13,7 +13,7 @@ const siteConfig = {
       desc: "A complete end-to-end machine learning regression project for predicting residential house prices using Python. This project includes data preprocessing, exploratory data analysis (EDA), feature engineering, model training, and performance evaluation using multiple ML algorithms. ",
       tech:["python", "Pandas" , "pandas", "matplotlib","seaborn","scikit-learn"], 
       github: "https://github.com/jayesh-87/House-Price-Prediction-using-Machine-Learning",
-      images:["/Portfolio/screenshots/correlation_heatmap.png"]
+      images:["/Portfolio/screenshots/correlationheatmap.png"]
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const siteConfig = {
       desc: "An IoT-based smart parking system that monitors availability, manages reservations, and optimizes parking spaces using sensors and real-time data.",
       tech: ["Python", "Raspberry Pi", "IoT", "Flask", "SQLite"],
       github: "https://github.com/jayesh-87/smart-parking-system",
-      images: ["/Portfolio/screenshots/smart-parking-1.png", "/Portfolio/screenshots/smart-parking-2.png"] // Add your actual paths
+      images: ["/Portfolio/screenshots/smartparking1.png", "/Portfolio/screenshots/smartparking2.png"] // Add your actual paths
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ const siteConfig = {
       desc: "An AI-powered trading assistant (Genie) that analyzes market data, predicts trends, and automates trading strategies using machine learning models.",
       tech: ["Python", "TensorFlow", "Pandas", "NumPy", "Scikit-learn"],
       github: "https://github.com/jayesh-87/Al-Trading-Genie",
-      images: ["/Portfolio/screenshots/ai-trading-1.png", "/Portfolio/screenshots/ai-trading-2.png"] // Add your actual paths
+      images: ["/Portfolio/screenshots/aitrading1.png", "/Portfolio/screenshots/aitrading2.png"] // Add your actual paths
     },
 
     {id: 4,
