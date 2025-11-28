@@ -159,6 +159,14 @@ h2 { margin-top: 0; color: var(--text); font-size: 2.5rem; font-weight: 700; tex
   color: inherit;
 }
 
+.about {
+  padding: 4rem;                /* Inner spacing like hero section */
+  background: transparent;
+  border-radius: var(--border-radius);
+  text-align: justify;          /* <-- Justifies the text */
+}
+
+
 /* Projects Carousel - Single project view with swipe */
 .projects-carousel { position: relative; display: flex; justify-content: center; align-items: center; min-height: 500px; }
 .card { background: var(--card); padding: 2rem; border-radius: var(--border-radius); display: flex; flex-direction: column; gap: 1.5rem; align-items: center; box-shadow: var(--shadow-light); transition: var(--transition); border: 1px solid rgba(31,41,55,0.05); max-width: 600px; width: 100%; }
@@ -223,7 +231,7 @@ h2 { margin-top: 0; color: var(--text); font-size: 2.5rem; font-weight: 700; tex
     flex-direction: column;
     text-align: center;
     gap: 2rem; /* Reduced gap for tighter mobile layout */
-    padding: 3rem 0; /* Less padding to prevent crowding */
+    padding: 2rem; /* Less padding to prevent crowding */
   }
   .hero-right {
     width: 200px;
@@ -238,6 +246,10 @@ h2 { margin-top: 0; color: var(--text); font-size: 2.5rem; font-weight: 700; tex
   }
   .intro {
     font-size: 1rem; /* Consistent sizing */
+  }
+  .about {
+    padding: 2rem;              /* Prevents touching edges on small screens */
+    text-align: justify;
   }
   /* Other existing rules in the media query remain unchanged */
 }
