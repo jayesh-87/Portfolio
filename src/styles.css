@@ -22,7 +22,8 @@ body {
 }
 .container { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; } /* Wider container and more padding */
 .topbar { backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 40; background: rgba(255,255,255,0.95); border-bottom: 1px solid rgba(31,41,55,0.1); box-shadow: var(--shadow-light); }
-.topbar .container { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 2rem; }
+.topbar .container {display: flex;align-items: center;justify-content: space-between;padding: 0.8rem 1.5rem;   /* Reduced height */}
+/* .topbar .container { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 2rem; } */
 .logo { font-weight: 700; color: var(--accent); text-decoration: none; font-size: 1.5rem; transition: var(--transition); }
 .logo:hover { color: var(--secondary); }
 .nav { display: flex; } /* Desktop nav: flex layout */
