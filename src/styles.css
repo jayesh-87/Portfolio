@@ -37,15 +37,14 @@ body {
 .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
 
 /* Mobile Nav Overlay */
-/* Mobile Nav Slide-In From Left */
 .mobile-nav {
   position: fixed;
   top: 0;
-  left: -250px;        /* Start hidden off-screen */
-  width: 250px;        /* Width of side menu */
-  height: 100%;
-  background: #111;
-  z-index: 50;
+  left: -260px;
+  width: 260px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);            /* ← SOLID background */
+  z-index: 9999;                 /* Always on top */
   display: flex;
   flex-direction: column;
   padding-top: 4rem;
@@ -53,31 +52,26 @@ body {
   gap: 1rem;
   transition: left 0.3s ease-in-out;
 }
-
-/* When menu is open */
 .mobile-nav.open {
-  left: 0;            /* Slide into view */
+  left: 0;
 }
-
-/* Mobile Nav links */
 .mobile-nav a {
   color: #fff;
-  text-decoration: none;
   font-size: 1.3rem;
-  margin: 0.5rem 0;
+  margin: 0.6rem 0;
+  text-decoration: none;
 }
-
-/* Close Button (X) */
 .mobile-nav-close {
   position: absolute;
   top: 15px;
   right: 15px;
   font-size: 2rem;
+  color: #fff;
   background: none;
   border: none;
-  color: #fff;
   cursor: pointer;
 }
+
 
 .hero { display: flex; gap: 4rem; align-items: center; padding: 6rem 0; background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(16,185,129,0.1) 100%); border-radius: var(--border-radius); margin-bottom: 2rem; } /* Added subtle background gradient and margin */
 .hero-left { flex: 1; }
