@@ -1,5 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import siteConfig from '../data/siteConfig';
+import React, { useState, useEffect, useRef } from 'react'
+import siteConfig from '../data/siteConfig'
+import correlationheatmap from '../assets/correlationheatmap.png'
+
+// ... then in projects: images: [correlationheatmap]
 
 // Modal Component for Swipeable Image Gallery
 function ImageModal({ images, initialIndex, onClose }) {
