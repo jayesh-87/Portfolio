@@ -13,7 +13,7 @@ const siteConfig = {
       desc: "A complete end-to-end machine learning regression project for predicting residential house prices using Python. This project includes data preprocessing, exploratory data analysis (EDA), feature engineering, model training, and performance evaluation using multiple ML algorithms. ",
       tech:["python", "Pandas" , "pandas", "matplotlib","seaborn","scikit-learn"], 
       github: "https://github.com/jayesh-87/House-Price-Prediction-using-Machine-Learning",
-      images:["/src/assets/correlation_heatmap.png"]
+      images:["/screenshots/correlation_heatmap.png"]
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const siteConfig = {
       desc: "An IoT-based smart parking system that monitors availability, manages reservations, and optimizes parking spaces using sensors and real-time data.",
       tech: ["Python", "Raspberry Pi", "IoT", "Flask", "SQLite"],
       github: "https://github.com/jayesh-87/smart-parking-system",
-      images: ["/src/assets/smart-parking-1.png", "/src/assets/smart-parking-2.png"] // Add your actual paths
+      images: ["/screenshots/smart-parking-1.png", "/screenshots/smart-parking-2.png"] // Add your actual paths
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ const siteConfig = {
       desc: "An AI-powered trading assistant (Genie) that analyzes market data, predicts trends, and automates trading strategies using machine learning models.",
       tech: ["Python", "TensorFlow", "Pandas", "NumPy", "Scikit-learn"],
       github: "https://github.com/jayesh-87/Al-Trading-Genie",
-      images: ["/src/assets/ai-trading-1.png", "/src/assets/ai-trading-2.png"] // Add your actual paths
+      images: ["/screenshots/ai-trading-1.png", "/screenshots/ai-trading-2.png"] // Add your actual paths
     },
 
     {id: 4,
@@ -37,7 +37,7 @@ const siteConfig = {
       desc: "An automation tool for scraping and processing court data efficiently, built to handle large-scale data extraction with error handling and scheduling.",
       tech: ["Python", "Selenium", "BeautifulSoup", "Pandas"],
       github: "https://github.com/jayesh-87/Court-Data-Scraper-Automation-Tool",
-      images: ["/src/assets/court-scraper-1.png", "/src/assets/court-scraper-2.png", "/src/assets/court-scraper-3.png"] // Array of image paths
+      images: ["/screenshots/court-scraper-1.png", "/screenshots/court-scraper-2.png", "/screenshots/court-scraper-3.png"] // Array of image paths
     }
   ],
  skills: [
