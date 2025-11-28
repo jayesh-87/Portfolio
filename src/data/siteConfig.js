@@ -14,7 +14,7 @@ const siteConfig = {
            desc: "A complete end-to-end machine learning regression project for predicting residential house prices using Python. This project includes data preprocessing, exploratory data analysis (EDA), feature engineering, model training, and performance evaluation using multiple ML algorithms.",
            tech: ["python", "Pandas", "pandas", "matplotlib", "seaborn", "scikit-learn"],
            github: "https://github.com/jayesh-87/House-Price-Prediction-using-Machine-Learning",
-           images: ["/Portfolio/screenshots/correlationheatmap.png"]  // Fixed
+           images: ["./Portfolio/screenshots/correlationheatmap.png"]  // Fixed
          },
          {
            id: 2,
