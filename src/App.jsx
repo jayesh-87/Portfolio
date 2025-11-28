@@ -1,4 +1,4 @@
-import React, { useState } from 'react';  // Added useState for menu toggle
+import React, { useState } from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -9,16 +9,16 @@ import Footer from './components/Footer';
 import siteConfig from './data/siteConfig';
 
 export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);  // State to track menu open/close
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);  // Function to toggle menu
-  const closeMenu = () => setIsMenuOpen(false);  // Function to close menu (e.g., after clicking a link)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <div>
       <header className="topbar">
         <div className="container">
-          <a href="#home" className="logo" onClick={closeMenu}>{siteConfig.name}</a>  // Close menu on logo click
+          <a href="#home" className="logo" onClick={closeMenu}>{siteConfig.name}</a>
           <nav className="nav">
             <a href="#about" onClick={closeMenu}>About</a>
             <a href="#skills" onClick={closeMenu}>Skills</a>
@@ -26,15 +26,14 @@ export default function App() {
             <a href="#experience" onClick={closeMenu}>Training & Intern</a>
             <a href="#contact" onClick={closeMenu}>Contact</a>
           </nav>
-          {/* Hamburger Button - Only visible on mobile via CSS */}
           <button className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu} aria-label="Toggle menu">
             <span></span>
             <span></span>
             <span></span>
           </button>
         </div>
-        {/* Mobile Nav Overlay - Only visible when open */}
         <div className={`mobile-nav ${isMenuOpen ? 'open' : ''}`}>
+          <button className="mobile-nav-close" onClick={closeMenu}>&times;</button>
           <a href="#about" onClick={closeMenu}>About</a>
           <a href="#skills" onClick={closeMenu}>Skills</a>
           <a href="#projects" onClick={closeMenu}>Projects</a>

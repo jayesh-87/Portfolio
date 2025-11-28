@@ -37,10 +37,47 @@ body {
 .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
 
 /* Mobile Nav Overlay */
-.mobile-nav { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 50; flex-direction: column; justify-content: center; align-items: center; }
-.mobile-nav.open { display: flex; }
-.mobile-nav a { color: #FFFFFF; font-size: 1.5rem; margin: 1rem 0; text-decoration: none; transition: var(--transition); }
-.mobile-nav a:hover { color: var(--accent); transform: scale(1.1); }
+/* Mobile Nav Slide-In From Left */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: -250px;        /* Start hidden off-screen */
+  width: 250px;        /* Width of side menu */
+  height: 100%;
+  background: #111;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  padding-left: 2rem;
+  gap: 1rem;
+  transition: left 0.3s ease-in-out;
+}
+
+/* When menu is open */
+.mobile-nav.open {
+  left: 0;            /* Slide into view */
+}
+
+/* Mobile Nav links */
+.mobile-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
+
+/* Close Button (X) */
+.mobile-nav-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
 
 .hero { display: flex; gap: 4rem; align-items: center; padding: 6rem 0; background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(16,185,129,0.1) 100%); border-radius: var(--border-radius); margin-bottom: 2rem; } /* Added subtle background gradient and margin */
 .hero-left { flex: 1; }
