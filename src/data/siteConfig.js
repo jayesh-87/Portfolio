@@ -9,11 +9,11 @@ const siteConfig = {
   projects: [
     {
       id: 1,
-      title: "Court Data Scraper Automation Tool",
-      desc: "An automation tool for scraping and processing court data efficiently, built to handle large-scale data extraction with error handling and scheduling.",
-      tech: ["Python", "Selenium", "BeautifulSoup", "Pandas"],
-      github: "https://github.com/jayesh-87/Court-Data-Scraper-Automation-Tool",
-      images: ["/images/court-scraper-1.png", "/images/court-scraper-2.png", "/images/court-scraper-3.png"] // Array of image paths
+      title: 'House Price Prediction using Machine Learning',
+      desc: "A complete end-to-end machine learning regression project for predicting residential house prices using Python. This project includes data preprocessing, exploratory data analysis (EDA), feature engineering, model training, and performance evaluation using multiple ML algorithms. ",
+      tech:["python", "Pandas" , "pandas", "matplotlib","seaborn","scikit-learn"], 
+      github: "https://github.com/jayesh-87/House-Price-Prediction-using-Machine-Learning",
+      images:["/images/correlation_heatmap.png"]
     },
     {
       id: 2,
@@ -30,6 +30,14 @@ const siteConfig = {
       tech: ["Python", "TensorFlow", "Pandas", "NumPy", "Scikit-learn"],
       github: "https://github.com/jayesh-87/Al-Trading-Genie",
       images: ["/images/ai-trading-1.png", "/images/ai-trading-2.png"] // Add your actual paths
+    },
+
+    {id: 4,
+      title: "Court Data Scraper Automation Tool",
+      desc: "An automation tool for scraping and processing court data efficiently, built to handle large-scale data extraction with error handling and scheduling.",
+      tech: ["Python", "Selenium", "BeautifulSoup", "Pandas"],
+      github: "https://github.com/jayesh-87/Court-Data-Scraper-Automation-Tool",
+      images: ["/images/court-scraper-1.png", "/images/court-scraper-2.png", "/images/court-scraper-3.png"] // Array of image paths
     }
   ],
  skills: [
