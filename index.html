@@ -2,8 +2,57 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name — Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Jayesh Solanke — SDET (Test Automation &amp; Quality Engineering)</title>
+    <meta
+      name="description"
+      content="Jayesh Solanke, SDET 1. I build reliable test automation with Playwright and Java — validating APIs and user workflows, and finding regression risk before changes reach production."
+    />
+    <meta name="author" content="Jayesh Solanke" />
+    <link rel="canonical" href="https://jayesh-87.github.io/Portfolio/" />
+
+    <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="mask-icon" href="/favicon.svg" color="#2563eb" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Jayesh Solanke" />
+    <meta property="og:title" content="Jayesh Solanke — SDET (Test Automation &amp; Quality Engineering)" />
+    <meta
+      property="og:description"
+      content="SDET 1 focused on reliable test automation, API validation, and regression risk — built with Playwright and Java."
+    />
+    <meta property="og:url" content="https://jayesh-87.github.io/Portfolio/" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Jayesh Solanke — SDET (Test Automation &amp; Quality Engineering)" />
+    <meta
+      name="twitter:description"
+      content="SDET 1 focused on reliable test automation, API validation, and regression risk — built with Playwright and Java."
+    />
+
+    <script>
+      // Apply the saved theme (or the visitor's system preference) before first paint
+      // so the page never flashes the wrong colors.
+      (function () {
+        try {
+          var stored = window.localStorage.getItem("portfolio-theme");
+          var preferred =
+            stored ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", preferred);
+        } catch (err) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

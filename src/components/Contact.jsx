@@ -1,85 +1,85 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
 import siteConfig from '../data/siteConfig';
+import SectionHeading from './SectionHeading';
+import { ExternalIcon, GithubIcon, LinkedinIcon, MailIcon } from './icons';
+
+const handle = (url) => url.replace(/\/+$/, '').split('/').pop();
+
+const channels = (config) => [
+  {
+    id: 'email',
+    label: 'Email',
+    value: config.email,
+    hint: 'Best for roles, collaborations, and questions',
+    icon: MailIcon,
+    href: `mailto:${config.email}`,
+    external: false,
+    action: 'Send an email',
+  },
+  {
+    id: 'linkedin',
+    label: 'LinkedIn',
+    value: handle(config.linkedin),
+    hint: 'Professional profile and background',
+    icon: LinkedinIcon,
+    href: config.linkedin,
+    external: true,
+    action: 'Open profile',
+  },
+  {
+    id: 'github',
+    label: 'GitHub',
+    value: handle(config.github),
+    hint: 'Source code and automation work',
+    icon: GithubIcon,
+    href: config.github,
+    external: true,
+    action: 'View repositories',
+  },
+];
 
 export default function Contact() {
-  const formRef = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        'service_sndwlhr',   
-        'template_lz46dzw',    
-        formRef.current,
-        'es8IIpFQTuoVYDrpN'      
-      )
-      .then(
-        () => {
-          alert('Message sent successfully!');
-          formRef.current.reset();
-        },
-        (error) => {
-          console.error(error);
-          alert('Failed to send message. Please try again.');
-        }
-      );
-  };
+  const items = channels(siteConfig);
 
   return (
-    <div className="contact container">
-      <h2>Contact</h2>
-      <p>Let's build something together — reach out via email or social links.</p>
+    <section className="section section--navy" id="contact" aria-labelledby="contact-title">
+      <div className="container">
+        <SectionHeading
+          id="contact-title"
+          eyebrow="06 / Contact"
+          title="Get in touch"
+          lead={siteConfig.contact.heading}
+        />
 
-      <div className="contact-grid">
-        {/* Contact Info Card */}
-        <div className="contact-card contact-card-small">
-          <h4>Get in Touch</h4>
-          <p>
-            <strong>Email:</strong>{' '}
-            <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
-          </p>
-          <p>
-            <strong>Links:</strong>
-            <br />
-            <a href={siteConfig.github} target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-            <br />
-            <a href={siteConfig.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-          </p>
-        </div>
+        <ul className="contact-grid">
+          {items.map(({ icon: Icon, external, href, label, value, hint, action, id }) => (
+            <li key={id}>
+              <a
+                className="contact-card"
+                href={href}
+                {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
+              >
+                <span className="contact-card__icon" aria-hidden="true">
+                  <Icon className="icon" />
+                </span>
+                <span className="contact-card__label">{label}</span>
+                <span className="contact-card__value">{value}</span>
+                <span className="contact-card__hint">{hint}</span>
+                <span className="contact-card__action">
+                  {action}
+                  {external ? (
+                    <>
+                      <ExternalIcon className="icon icon--xs" />
+                      <span className="sr-only"> (opens in a new tab)</span>
+                    </>
+                  ) : null}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
 
-        {/* Contact Form */}
-        <form ref={formRef} className="contact-form" onSubmit={sendEmail}>
-          <label>
-            Name
-            <input required type="text" name="name" placeholder="Your Name" />
-          </label>
-
-          <label>
-            Email
-            <input required type="email" name="email" placeholder="your.email@example.com" />
-          </label>
-
-          <label>
-            Message
-            <textarea
-              required
-              name="message"
-              rows="4"
-              placeholder="Your message here..."
-            ></textarea>
-          </label>
-
-          <button className="btn" type="submit">
-            Send Message
-          </button>
-        </form>
+        <p className="contact__note">{siteConfig.contact.note}</p>
       </div>
-    </div>
+    </section>
   );
 }
