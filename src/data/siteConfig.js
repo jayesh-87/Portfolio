@@ -8,17 +8,17 @@ import profilePhoto from '../assets/profile.jpg';
  * To add a project: append an object to `projects` (featured) or
  * `earlierProjects`. No component changes are required.
  *
- * Keep this file free of employer names, internal tooling, and proprietary detail.
+ * Keep personal copy, employer names, and public project details centralized here.
  */
 const siteConfig = {
   name: 'Jayesh Solanke',
-  designation: 'SDET 1',
-  eyebrow: 'Software Development Engineer in Test',
+  designation: 'Automation Engineer',
+  eyebrow: 'Automation Engineer · FinacPlus',
   focus: 'Software Quality Engineering & Test Automation',
 
   headline: ['Building reliable automation.', 'Delivering software with confidence.'],
   heroIntro:
-    'I engineer maintainable test automation, validate APIs and user workflows, and explore smarter ways to identify regression risks before changes reach production.',
+    "Hi, I'm Jayesh Solanke, an Automation Engineer at FinacPlus, passionate about building reliable automation solutions, developing scalable test frameworks, and improving software quality through efficient testing strategies. Previously, I worked as an SDET 1 at GoComet, gaining hands-on experience in UI automation, API testing, regression testing, and software quality engineering.",
 
   email: 'jayeshsoanke47@gmail.com',
   github: 'https://github.com/jayesh-87',
@@ -64,14 +64,14 @@ const siteConfig = {
 
   about: {
     paragraphs: [
-      "I'm a Software Development Engineer in Test (SDET 1) focused on quality engineering and test automation. Day to day that means designing, building, and maintaining automated suites that a team can trust — mostly with Playwright and Java — covering UI workflows, API behaviour, and the integration points where regressions tend to hide.",
-      'I treat test architecture as seriously as individual test cases: predictable isolation, deliberate test data setup and cleanup, and failures that read clearly instead of sending you back to the logs. When a suite goes red I work from evidence — traces, diffs, and logs — to separate a genuine product defect from a flaky test rather than guessing.',
-      'I also care about where tests run: CI/CD pipelines that surface regressions early, suites that stay fast enough to run often, and smarter ways to choose the right regression scope instead of always running everything.',
+      'Automation Engineer at FinacPlus with previous experience as an SDET 1 at GoComet. Experienced in UI automation, API testing, regression testing, and integration testing.',
+      'Interested in building maintainable automation frameworks, improving test coverage, optimizing testing workflows, and integrating automation into CI/CD pipelines.',
+      'Passionate about continuous learning, debugging complex issues, and delivering reliable software through automation.',
     ],
     facts: [
-      { label: 'Current role', value: 'SDET 1' },
-      { label: 'Focus', value: 'Test automation & quality engineering' },
-      { label: 'Primary stack', value: 'Playwright · Java' },
+      { label: 'Current role', value: 'Automation Engineer' },
+      { label: 'Organization', value: 'FinacPlus' },
+      { label: 'Previous role', value: 'SDET 1 at GoComet' },
       { label: 'Education', value: 'B.Tech, Information Technology' },
     ],
     photoAlt: 'Portrait of Jayesh Solanke',
@@ -79,56 +79,46 @@ const siteConfig = {
 
   skills: [
     {
-      title: 'Programming',
-      items: ['Java', 'TypeScript'],
+      title: 'QA & Automation',
+      items: ['Java', 'Playwright', 'Selenium', 'JUnit', 'API Testing', 'Postman', 'pytest'],
     },
     {
-      title: 'Test automation',
-      items: ['Playwright', 'Selenium WebDriver', 'pytest', 'Page object model', 'End-to-end tests'],
+      title: 'Programming & Development',
+      items: ['JavaScript', 'TypeScript', 'Python', 'SQL', 'REST APIs'],
     },
     {
-      title: 'API & integration testing',
-      items: ['REST API testing', 'Integration testing', 'Response & error validation', 'Cross-layer workflows'],
-    },
-    {
-      title: 'CI/CD & version control',
-      items: ['Git', 'GitHub Actions', 'Jenkins', 'CI pipeline configuration'],
-    },
-    {
-      title: 'Quality engineering',
-      items: [
-        'Regression testing',
-        'Test isolation',
-        'Test data management',
-        'Defect analysis',
-        'Root cause analysis',
-        'Risk-based testing',
-        'Flaky test triage',
-      ],
-    },
-    {
-      title: 'Tools',
-      items: ['IntelliJ IDEA', 'Jira', 'Confluence'],
+      title: 'CI/CD & Tools',
+      items: ['Jenkins', 'Git', 'GitHub', 'GitHub Actions', 'Jira'],
     },
   ],
   skillsNote:
-    'Currently exploring: intelligent regression test selection, risk-based test selection, and automation framework architecture.',
+    'Focused on maintainable automation frameworks, regression testing, integration testing, and software quality engineering.',
 
   experience: [
     {
-      id: 'sdet-1',
-      role: 'SDET 1',
-      focus: 'Software Quality Engineering & Test Automation',
-      period: 'Current role',
-      summary:
-        'Building and maintaining automated coverage for user-facing and API behaviour — with an emphasis on suites that stay reliable and reproducible, so a red run can be trusted.',
+      id: 'finacplus',
+      role: 'Automation Engineer',
+      focus: 'FinacPlus',
+      period: 'Present',
+      summary: 'Working as an Automation Engineer, focusing on automation solutions and software quality.',
       responsibilities: [
-        'Developing and maintaining automated tests across UI and API layers.',
-        'Validating application behaviour against requirements and expected outcomes.',
-        'Improving regression reliability, coverage, and execution stability.',
-        'Investigating failures, analysing defects, and isolating root causes.',
-        'Working with version control and CI/CD workflows to run suites consistently.',
-        'Improving test data setup, isolation, and cleanup so runs stay reproducible.',
+        'Working as an Automation Engineer, focusing on automation solutions and software quality.',
+        'Contributing to reliable and maintainable automation workflows.',
+        'Applying automation engineering practices to improve testing efficiency and software reliability.',
+      ],
+    },
+    {
+      id: 'gocomet',
+      role: 'Software Development Engineer in Test (SDET 1)',
+      focus: 'GoComet',
+      period: 'Previous',
+      summary: 'Built and maintained test automation solutions and contributed to software quality engineering.',
+      responsibilities: [
+        'Worked on building and maintaining test automation solutions.',
+        'Performed UI automation and API testing.',
+        'Contributed to regression and integration testing.',
+        'Investigated defects and debugged test failures.',
+        'Worked towards improving test coverage and overall software quality.',
       ],
     },
   ],
@@ -161,8 +151,8 @@ const siteConfig = {
       name: 'Automated Library Management System',
       status: 'Public repository',
       description:
-        'A library management system built automation-first: layered pytest suites for API and business logic, Selenium UI automation using the page object pattern, and GitHub Actions running the tests on every change.',
-      tags: ['Python', 'FastAPI', 'pytest', 'Selenium', 'Page object model', 'GitHub Actions'],
+        'An automated library management system project using Python and Selenium, with a page object model for maintainable UI test automation.',
+      tags: ['Python', 'Selenium', 'Page Object Model'],
       source: 'https://github.com/jayesh-87/Automated-Library-Management-System',
       sourceLabel: 'View Source',
       demo: null,
@@ -172,8 +162,8 @@ const siteConfig = {
       name: 'Stock Price Predictor',
       status: 'Public repository',
       description:
-        'A machine learning project exploring stock price prediction and data-driven analysis, forecasting prices with an LSTM prototype alongside a data exploration pipeline.',
-      tags: ['Python', 'LSTM', 'Time-series forecasting'],
+        'A data-driven stock price prediction project exploring machine learning models and SQL-based data workflows.',
+      tags: ['Python', 'TensorFlow', 'SQL'],
       source: 'https://github.com/jayesh-87/1st-prototype',
       sourceRepo: 'jayesh-87/1st-prototype',
       sourceLabel: 'View Source',
@@ -236,7 +226,7 @@ const siteConfig = {
   ],
 
   contact: {
-    heading: 'Open to conversations about quality engineering, test automation, and SDET roles.',
+    heading: 'Open to conversations about automation engineering, test automation, and software quality engineering.',
     note: 'The fastest way to reach me is email — I read everything that lands there.',
   },
 };

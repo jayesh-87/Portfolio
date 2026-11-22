@@ -1,8 +1,8 @@
-# Jayesh Solanke — SDET Portfolio
+# Jayesh Solanke — Automation Engineer Portfolio
 
-A single-page, statically built portfolio for **Jayesh Solanke, SDET 1** (software
-quality engineering & test automation). Built with React 18 + Vite and plain CSS,
-deployed to GitHub Pages.
+A single-page, statically built portfolio for **Jayesh Solanke, Automation Engineer
+at FinacPlus**, with previous experience as an SDET 1 at GoComet. Built with React
+18 + Vite and plain CSS, deployed to GitHub Pages.
 
 **Live site:** <https://jayesh-87.github.io/Portfolio/>
 
